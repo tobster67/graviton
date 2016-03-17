@@ -1,0 +1,13 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+  cachedir: /tmp/
+services:
+  service_name:
+    arguments:
+      - "%cachedir%"
+    class: Doctrine\Common\Cache\FileCache
+    id: doctrine_cache.providers.local
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

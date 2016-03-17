@@ -1,0 +1,69 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
+
+    graviton.mongodb.default.server.db: db
+    graviton.mongodb.default.server.uri: null
+    graviton.log.path: '%kernel.logs_dir%/%kernel.environment%.log'
+    graviton.security.authentication.header_required: false
+    graviton.security.authentication.test_username: false
+    graviton.security.authentication.allow_anonymous: true
+    graviton.security.authentication.strategy: graviton.security.authentication.strategy.cookie
+    graviton.security.authentication.strategy_key: graviton_user
+    graviton.security.authentication.provider.model: graviton.security.authentication.provider.model.noop
+    graviton.security.authentication.provider.model.query_field: false
+    graviton.security.query.filter_by_user: false
+    graviton.security.query.filter_by_field: consultant.$id
+    graviton.security.services.whitelist: {  }
+    graviton.rest.special_mimetypes: {  }
+    graviton.router.host: null
+    graviton.router.port_http: null
+    graviton.router.port_https: null
+    graviton.security.oauth.github.client_id: null
+    graviton.security.oauth.github.client_secret: null
+    vcap.services: null
+    locale: en
+    graviton.file.backend: local
+    graviton.file.s3.endpoint: null
+    graviton.file.s3.key: null
+    graviton.file.s3.secret: null
+    graviton.file.s3.bucket_name: graviton-dev-bucket
+    graviton.aws_s3.endpoint: null
+    graviton.aws_s3.key: null
+    graviton.aws_s3.secret: null
+    graviton.aws_s3.bucket_name: graviton-dev-bucket
+    graviton.errbit.api_key: null
+    graviton.errbit.host: null
+    graviton.rabbitmq.host: localhost
+    graviton.rabbitmq.port: 5672
+    graviton.rabbitmq.user: guest
+    graviton.rabbitmq.password: guest
+    graviton.rabbitmq.vhost: /
+    graviton.rabbitmq.consumer.dump.routingkeys:
+        - 'document.#'
+    graviton.rest.pagination.limit: 10
+    graviton.composer.cmd: composer
+    graviton.proxy.httploader.curloptions: {  }
+    graviton.proxy.swagger.sources: {  }
+    graviton.file.gaufrette.backend: local
+    graviton.document.type.extref.mapping: null
+    graviton.document.eventmap: null
+    graviton.document.field.names: null
+    graviton.proxy.sources: {  }
+    graviton.translator.default.locale: en
+    graviton.document.type.translatable.fields: null
+    graviton.core.links: {  }
+    graviton.core.main.path.whitelist: {  }
+
