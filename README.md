@@ -10,7 +10,11 @@ https://github.com/tobster67/graviton-core.git
 
 ## Install
 
-Clone this,
+Clone this with the --recursive flag to clone the submodule with it
+
+```
+git clone --recursive https://github.com/tobster67/graviton.git
+```
 
 type composer install
 
