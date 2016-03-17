@@ -1,0 +1,3 @@
+[submodule "src/Graviton"]
+	path = src/Graviton
+	url = https://github.com/tobster67/graviton-core.git
