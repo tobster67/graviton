@@ -1,8 +1,14 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "license": "MIT",
+    "name": "graviton/graviton",
+    "license": "GPL",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The base package for graviton",
+    "authors": [
+        {
+            "name": "List of contributors",
+            "homepage": "https://github.com/libgraviton/graviton/graphs/contributors"
+        }
+    ],
     "autoload": {
         "psr-4": { "": "src/" }
     },
@@ -13,7 +19,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.6",
         "symfony/symfony": "2.7.*",
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
