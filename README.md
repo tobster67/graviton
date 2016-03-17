@@ -1,72 +1,42 @@
-Graviton Standard Wrapper based on Symfony Standard Edition
-===========================================================
+Graviton Application based on Symfony Standard Edition
+======================================================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+The Symfony Standard Edition with a slightly adapted Kernel
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+The Graviton Bundles are a linked into src/Graviton as a git submodule.
 
-What's inside?
---------------
+They originally reside here:
+https://github.com/tobster67/graviton-core.git
 
-The Symfony Standard Edition is configured with the following defaults:
+## Install
 
-  * An AppBundle you can use to start coding;
+Clone this,
 
-  * Twig as the only configured template engine;
+type composer install
 
-  * Doctrine ORM/DBAL;
+follow the instructions
 
-  * Swiftmailer;
+the Dynamic Bundles will be generated in src/GravitonDyn
 
-  * Annotations enabled for everything.
+## Usage
 
-It comes pre-configured with the following bundles:
+### Start the REST-Service
+php app/console server:start 0.0.0.0:8000
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+### Stop the REST-Service
+php app/console server:stop 0.0.0.0:8000
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+### (Re)generate the Dynamic Bundles
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+delete them
+rm -rf src/GravitonDyn
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+regenerate them
+php app/console graviton:generate:dynamicbundles --srcDir=src/
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+clear the cache with a regular symfony command
+php app/console cache:clear
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+### Generate the swagger.json
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/2.7/book/installation.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/2.7/book/doctrine.html
-[8]:  https://symfony.com/doc/2.7/book/templating.html
-[9]:  https://symfony.com/doc/2.7/book/security.html
-[10]: https://symfony.com/doc/2.7/cookbook/email.html
-[11]: https://symfony.com/doc/2.7/cookbook/logging/monolog.html
-[12]: https://symfony.com/doc/2.7/cookbook/assetic/asset_management.html
-[13]: https://symfony.com/doc/2.7/bundles/SensioGeneratorBundle/index.html
+php app/console graviton:swagger:generate
